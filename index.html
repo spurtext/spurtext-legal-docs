@@ -1,0 +1,197 @@
+<html>
+<head>
+<title>Spurtext Home Page</title>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/foundation.css" />
+    <script src="static/js/vendor/modernizr.js"></script>
+</head>
+
+<style>
+@font-face
+{
+font-family: YonderRecoil;
+src: url(static/font/YonderRecoil.ttf);
+font-weight:bold;
+}
+
+.f_title
+{
+font-family:YonderRecoil;
+font-size:40px;
+color:#ffffff;
+text-shadow:2px 2px #000000;
+padding-top:50px;
+}
+
+.f_subtitle
+{
+font-family:YonderRecoil;
+font-size:x-large;
+color:#6600CC;
+}
+
+.bg_img
+{
+border-width:0; 
+background: url('static/img/jtsunrise.jpg') repeat center;
+background-color: #000;
+width:100%;
+height:275;
+cellpadding:"0";
+cellspacing:"0"
+}
+</style>
+
+<body>
+<div class="main-content">
+<div class="fixed">
+  <nav class="top-bar" data-topbar>
+    <div class="nav-center">
+      <ul class="nav-list">
+        <li class="nav-logo">
+          <a href="index.html"><img src="images/spurtextlogo.png" alt="Spurtext Logo" style="height:32px;vertical-align:middle;"></a>
+        </li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="featuresintroduction.html">Features Introduction</a></li>
+        <li><a href="announcement.html">Announcement</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="menu-icon" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<br><br><br>
+	
+
+
+
+
+<!-- 页面内容 -->
+<div class="row">
+	<div class="large-12 columns">
+		<div align="left">
+				  <img src="images/spurtextlogo.png" height="1960" width="1600" style='display: block;margin-left: auto;margin-right: auto;'><br>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="large-12 columns">
+		<h2 class="f_subtitle">Spurtext<br></h2>		
+	</div>
+</div>
+
+<br><br><br>	
+
+<div class="row">
+	<div class="large-12 columns">
+		<ul>
+			 Spurtext is the world's first instant messaging application that allows users to set reply time limits for contacts, officially launched on the Apple App Store for the first time on June 15, 2025.
+			 <br><br>
+			 Spurtext is a great tool for efficient communication. It was inspired by the military letters conveyed between the generals of the two armies in ancient China to limit the number of hours for the other general to reply. The literal meaning is to make the messages send and receive  between the contacts as fast as a galloping horse. The tool used to gallop a horse is a spur. Limiting how long your contact can reply to your message in the Spurtext network is like a knight kicking a spur at a horse and causing the horse to speed up. This is a metaphor that makes the conversation more exciting in the application.
+			 <br><br>
+			 【Innovative】<br>
+			 An unprecedented way to chat and interact;
+			 Spurtext is the world's first social app to facilitate smooth and efficient communication by limiting how long your contact can reply to your message;
+			 According to the relevant settings of the contact, you do not need to apply to add friends.
+			 <br><br>
+			 【Spurcoin Consumption Mechanism】<br>
+			 The users limit the amount of time the contact can reply to them by choosing any length between 1 minute and 23 hours and 59 minutes when they send the spurtext. The number of spur coins spent to select different time limit is different. The amount of spur coins spent increases as the time limit decreases. The shortest 1 minute costs 100 coins, and the longest 23 hours and 59 minutes cost 5 coins. 
+			 <br><br>
+			 【On-Time Reply Rate】<br>
+			 On-Time Reply Rate is the ratio of the number of messages the user replied to the received spurtexts on time to the total spurtexts received by the user. The on-time reply rate is an important reference index to measure a user's punctual reply to the incoming spurtexts. It plays a vital role in the interaction between users.
+			 <br><br>
+			 【Spurcoin Reward Rules】<br>
+			 In order to encourage users to maintain a high on-time reply rate, the app has set up a spurcoin reward mechanism to give users an incentive to reply to as many incoming spurtexts as possible on time.
+			 Spurcoin Reward Rules:<br>
+			 [+3 coins]Your on-time response rate is maintained at 0.9 or above, and each on-time reply will reward 3 coins <br>
+			 [+2 coins]Your on-time response rate is maintained at 0.8~0.9, and each on-time reply will reward 2 coins  <br>
+			 [+1 coins]Your on-time response rate is maintained at 0.6~0.8, and each on-time reply will reward 1 coins  <br>
+			 Your on-time response rate is below 0.6, and there is no coin reward for each on-time reply
+			 <br><br>
+			 【Spurtexts Locking Mechanism】<br>
+			 After the spurtext is sent, if the contact has not clicked to view it for a while, the timer cannot start the countdown, and the user cannot send new messages to the contact. In this situation, the user can choose to continue waiting for the contact to click to view, or long press the sent spurtext and then click to the lock button 🔒, so that the contact will no longer be able to click to view the content of the spurtext. At this point, the user can send regular message or spurtext to that contact again.
+			 <br><br>
+		</ul> 
+
+
+		<br><br><br>	
+
+
+		<!-- 删除或注释掉 <hr> 标签 -->
+		<!-- <hr> -->
+
+		<br><br><br><br><br>
+
+
+
+	</div>
+</div> 
+
+
+<br><br><br>
+	 
+
+<script src="static/js/vendor/jquery.js"></script>
+<script src="static/js/foundation.min.js"></script>
+<script>$(document).foundation();</script>
+
+<!-- 新增：三道杠弹出菜单功能（最终修正版） -->
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navList = document.querySelector('.nav-list');
+  if(menuToggle && navList) {
+    menuToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if(navList.classList.contains('menu-open')) {
+        navList.classList.remove('menu-open');
+      } else {
+        navList.classList.add('menu-open');
+      }
+    });
+    // 点击菜单项后自动关闭
+    navList.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if(window.innerWidth <= 900) {
+          navList.classList.remove('menu-open');
+        }
+      });
+    });
+    // 点击页面其它区域关闭菜单
+    document.addEventListener('click', function(e) {
+      if(window.innerWidth <= 900 && navList.classList.contains('menu-open')) {
+        if(!navList.contains(e.target) && e.target !== menuToggle) {
+          navList.classList.remove('menu-open');
+        }
+      }
+    });
+    // 窗口变化时自适应
+    window.addEventListener('resize', function() {
+      if(window.innerWidth > 900) {
+        navList.classList.remove('menu-open');
+        navList.style.display = '';
+      }
+    });
+  }
+</script>
+
+</div>
+<div class="site-footer">
+  <div class="footer-logo-group">
+    <a href="index.html" class="footer-logo"><img src="images/spurtextlogo1.png" alt="Spurtext Logo" style="height:64px;vertical-align:middle;border-radius:16px;"></a>
+    <a href="https://apps.apple.com/us/app/spurtext/id6476929476" target="_blank" class="footer-appstore-badge"><img src="images/Download1.png" alt="Download on the App Store" style="height:40px;"></a>
+  </div>
+  <a href="privacypolicy.html" id="privacy-link">Privacy Policy</a>
+  <a href="termsofservice.html" id="terms-link">Terms of Service</a>
+</div>
+</body>
+</html>
