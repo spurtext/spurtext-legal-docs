@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>Spurtext Home Page</title>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/foundation.css" />
+    <script src="static/js/vendor/modernizr.js"></script>
+</head>
+
+<style>
+@font-face
+{
+font-family: YonderRecoil;
+src: url(static/font/YonderRecoil.ttf);
+font-weight:bold;
+}
+
+.f_title
+{
+font-family:YonderRecoil;
+font-size:40px;
+color:#ffffff;
+text-shadow:2px 2px #000000;
+padding-top:50px;
+}
+
+.f_subtitle
+{
+font-family:YonderRecoil;
+font-size:x-large;
+color:#6600CC;
+}
+
+.bg_img
+{
+border-width:0; 
+background: url('static/img/jtsunrise.JPG') repeat center;
+background-color: #000;
+width:100%;
+height:275;
+cellpadding:"0";
+cellspacing:"0"
+}
+</style>
+
+<body>
+<div class="main-content">
+<div class="fixed">
+  <nav class="top-bar" data-topbar>
+    <div class="nav-center">
+      <ul class="nav-list">
+        <li class="nav-logo">
+          <a href="index.html"><img src="images/spurtextlogo.png" alt="Spurtext Logo" style="height:32px;vertical-align:middle;"></a>
+        </li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="featuresintroduction.html">Features Introduction</a></li>
+        <li><a href="announcement.html">Announcement</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="menu-icon" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<br><br><br>
+
+<div class="row">
+	<div class="large-12 columns">
+		<h2 class="f_subtitle">Features Introduction<br></h2>		
+	</div>
+</div>
+
+<br><br>	
+	
+	
+<div class="row">
+	<div class="large-8 columns">
+		<div>
+			   <p><h4 style='color:#FF33FF'>Set Reply Time Limit</h4></p>
+			   <br>
+		       <p><img src="images/1 Set Reply Time Limit.png"></p>
+		       <br><br>
+
+
+			   <p><h4 style='color:#FF33FF'>Send Spurtext</h4></p>
+			   <br>
+		       <p><img src="images/2 Send Spurtext.png"></p>
+		       <br><br>
+
+
+			   <p><h4 style='color:#FF33FF'>Receive Spurtext</h4></p>
+			   <br>
+		       <p><img src="images/3 Receive Spurtext.png"></p>
+		       <br><br>
+
+
+			   <p><h4 style='color:#FF33FF'>The Countdown Begins</h4></p>
+			   <br>
+		       <p><img src="images/4 Click To View, The Countdown Begins.png"></p>
+		       <br><br>
+
+
+			   <p><h4 style='color:#FF33FF'>Reply On Time To Earn Coins Reward</h4></p>
+			   <br>
+		       <p><img src="images/5 Reply On Time To Earn Coins Reward.png"></p>
+		       <br><br>
+
+
+			   <p><h4 style='color:#FF33FF'>Receive On-Time Reply, The Countdown Stops</h4></p>
+			   <br>
+		       <p><img src="images/6 Receive On-Time Reply, The Countdown Stops.png"></p>
+		       <br><br>
+
+
+			   <p><h4 style='color:#FF33FF'>Spurcoin Reward Rules</h4></p>
+			   <br>
+		       <p><img src="images/7 Spurcoin Reward Rules.png"></p>
+		       <br><br>
+
+		</div>
+	</div>
+</div>
+
+	 
+
+<script src="static/js/vendor/jquery.js"></script>
+<script src="static/js/foundation.min.js"></script>
+<script>$(document).foundation();</script>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navList = document.querySelector('.nav-list');
+  if(menuToggle && navList) {
+    menuToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if(navList.classList.contains('menu-open')) {
+        navList.classList.remove('menu-open');
+      } else {
+        navList.classList.add('menu-open');
+      }
+    });
+    // 点击菜单项后自动关闭
+    navList.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if(window.innerWidth <= 900) {
+          navList.classList.remove('menu-open');
+        }
+      });
+    });
+    // 点击页面其它区域关闭菜单
+    document.addEventListener('click', function(e) {
+      if(window.innerWidth <= 900 && navList.classList.contains('menu-open')) {
+        if(!navList.contains(e.target) && e.target !== menuToggle) {
+          navList.classList.remove('menu-open');
+        }
+      }
+    });
+    // 窗口变化时自适应
+    window.addEventListener('resize', function() {
+      if(window.innerWidth > 900) {
+        navList.classList.remove('menu-open');
+        navList.style.display = '';
+      }
+    });
+  }
+</script>
+</div>
+<div class="site-footer">
+  <div class="footer-logo-group">
+    <a href="index.html" class="footer-logo"><img src="images/spurtextlogo1.png" alt="Spurtext Logo" style="height:64px;vertical-align:middle;border-radius:16px;"></a>
+    <a href="https://apps.apple.com/us/app/spurtext/id6476929476" target="_blank" class="footer-appstore-badge"><img src="images/Download1.png" alt="Download on the App Store" style="height:40px;"></a>
+  </div>
+  <a href="privacypolicy.html" id="privacy-link">Privacy Policy</a>
+  <a href="termsofservice.html" id="terms-link">Terms of Service</a>
+</div>
+</body>
+</html>
