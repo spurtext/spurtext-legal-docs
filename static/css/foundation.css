@@ -2404,7 +2404,8 @@ div.switch {
       display: block;
       width: 0;
       height: 0;
-      border: inset 10px; }
+      border: inset 10px;
+      }
   .orbit-container .orbit-prev {
     left: 0; }
     .orbit-container .orbit-prev > span {
@@ -5432,7 +5433,14 @@ th.hide-for-touch {
 
 @media (max-width: 900px) {
   .nav-list.menu-open li {
-    margin: 8px 0 !important; /* 缩小垂直间距 */
+    margin-bottom: 4px !important; /* 原来大约24px，缩小为三分之一 */
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    border-bottom: none !important;
+    line-height: 1.2 !important;
+  }
+  .nav-list.menu-open li:last-child {
+    margin-bottom: 0 !important;
   }
 }
 
@@ -5469,5 +5477,394 @@ th.hide-for-touch {
     box-shadow: none !important;
     outline: none !important;
     filter: none !important;
+  }
+}
+
+/* ---- Spurtext 自定义 Footer 响应式样式 ---- */
+.site-footer {
+  background: #f5f5f5;
+  padding: 32px 0 24px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.footer-logo-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-links a {
+  color: #222;
+  text-decoration: underline;
+  font-size: 18px;
+}
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 0 16px 0;
+  }
+  .footer-logo-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer-links a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    order: 1;
+  }
+  .footer-logo-group {
+    order: 2;
+  }
+  .site-footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .footer-logo-group {
+    flex-direction: column;
+    align-items: flex-start;
+    order: 1;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    order: 2;
+  }
+}
+
+/* ---- Spurtext 网页端 Footer 居中纵向布局 ---- */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px 0 24px 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+.footer-logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 保留移动端样式 */
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 0;
+    text-align: left;
+  }
+  .footer-logo-group {
+    flex-direction: column;
+    align-items: flex-start;
+    order: 1;
+    gap: 8px;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    order: 2;
+  }
+}
+
+/* ---- Spurtext 网页端 Footer 居中纵向布局 ---- */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px 0 24px 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+.footer-logo {
+  height: 64px;
+  border-radius: 16px;
+}
+.footer-appstore-badge img {
+  height: 40px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 保留移动端样式 */
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 0;
+    text-align: left;
+  }
+  .footer-logo {
+    height: 48px;
+    margin-bottom: 8px;
+  }
+  .footer-appstore-badge img {
+    height: 32px;
+  }
+  .site-footer > .footer-logo,
+  .site-footer > .footer-appstore-badge {
+    align-self: flex-start;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    order: 2;
+  }
+}
+
+.site-footer {
+  /* ... 其他样式 ... */
+  padding: 48px 0 36px 0; /* 原为32px 0 24px 0，增为1.5倍 */
+}
+
+/* ---- Spurtext Footer 统一样式定义 ---- */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px 0 36px 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+.footer-logo {
+  height: 64px;
+  border-radius: 16px;
+}
+.footer-appstore-badge img {
+  height: 40px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 0;
+    text-align: left;
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+  .footer-logo {
+    height: 48px;
+    margin-bottom: 8px;
+  }
+  .footer-appstore-badge img {
+    height: 32px;
+  }
+  .site-footer > .footer-logo,
+  .site-footer > .footer-appstore-badge {
+    align-self: flex-start;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    order: 2;
+  }
+}
+
+/* 删除所有重复的.site-footer、.footer-logo-group、.footer-links相关定义，避免样式冲突 */
+
+.site-footer {
+  padding: 80px 0 80px 0 !important;
+  min-height: 200px !important;
+  background: #f5f5f5;
+}
+
+.site-footer {
+  padding: 128px 0 96px 0 !important; /* 原padding: 32px 0 24px 0 的两倍 */
+  min-height: 260px !important; /* 200px的两倍略多一点，保证视觉效果 */
+  background: #f5f5f5;
+}
+
+/* ---- Spurtext Footer 统一纵向居中样式，适用于所有屏幕宽度 ---- */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 128px 0 96px 0 !important;
+  min-height: 260px !important;
+  background: #f5f5f5;
+  text-align: center;
+}
+.footer-logo {
+  height: 64px;
+  border-radius: 16px;
+}
+.footer-appstore-badge img {
+  height: 40px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 删除所有@media (max-width: 600px)下与footer相关的样式，保证所有屏幕宽度下都纵向居中排列 */
+
+.footer-logo,
+.footer-appstore-badge {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center !important;
+}
+
+.footer-links {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .footer-logo {
+    height: 40px;
+    border-radius: 12px;
+    object-fit: contain;
+  }
+  .footer-appstore-badge img {
+    height: 28px;
+  }
+}
+
+.footer-copyright {
+  color: #bbb;
+  font-size: 18px;
+  text-align: center;
+  margin: 12px 0 0 0;
+}
+@media (max-width: 600px) {
+  .footer-copyright {
+    font-size: 16px;
+    color: #bbb;
+  }
+}
+
+.site-footer {
+  padding: 192px 0 144px 0 !important; /* 原128px 0 96px 0的1.5倍 */
+  min-height: 390px !important; /* 原260px的1.5倍 */
+  background: #f5f5f5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .aboutus-img-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+  .aboutus-img-row img {
+    height: 140px !important;
+    width: auto !important;
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutus-img-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+  .aboutus-img-row img {
+    width: 90vw !important;
+    height: auto !important;
+    max-width: 350px;
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-list.menu-open {
+    gap: 0 !important;
+  }
+  .nav-list.menu-open li {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    line-height: 1 !important;
+    min-height: 0 !important;
+  }
+  .nav-list.menu-open li > a {
+    padding: 4px 0 !important;
+    margin: 0 !important;
+    line-height: 1.1 !important;
+    font-size: 18px !important;
+    min-height: 0 !important;
+    display: inline-block !important;
   }
 }
